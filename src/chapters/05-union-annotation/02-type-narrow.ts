@@ -10,10 +10,10 @@
 
 {
   const calcTax = (price: string | number, tax: number = 0.1): number => {
-    price = parseInt(price.replace(/(\,|원)/g, ''), 10);
+    price = parseInt(price.replace(/(\,|원)/g, ""), 10);
     return price * tax;
   };
 
   calcTax(92_000);
-  calcTax('10,749,500원', 0.33);
+  calcTax("10,749,500원", 0.33);
 }
