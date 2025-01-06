@@ -6,6 +6,7 @@
   "description": "TypeScript 프로그래밍을 학습합니다.",
   "author": "yamoo9 <yamoo9@euid.dev>",
   "devDependencies": {
-    "@types/node": "^22.10.5"
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.2"
   }
 }
