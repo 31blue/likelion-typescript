@@ -9,12 +9,24 @@
 
 {
   interface Store {
-    state: string[];
+    state: Array<string>;
+    getState(): String[];
+    setState(newStateItem: string): void;
   }
 
   const namesStore: Store = {
-    state: ['박아름', '한성연', '최연희'],
-    getState: () => {
+    state: ["박아름", "한성연", "최연희"],
+    getState() {
+      return this.state;
+    },
+    setState(newStateItem) {
+      this.state.push(newStateItem);
+    },
+  };
+
+  const ducksStore: Store = {
+    state: ["도널드덕", "톰덕"],
+    getState() {
       return this.state;
     },
     setState(newStateItem) {
