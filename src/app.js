@@ -1,9 +1,12 @@
-const http = require("node:http");
+import http from "node:http";
 
 const HOSTNAME = "localhost";
 const PORT = 4000;
 
 const server = http.createServer((request, response) => {
+  console.log(request.url);
+  console.log(request.name);
+
   response.end(`
     <!doctype html>
     <html lang="ko-KR">

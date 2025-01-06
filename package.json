@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "private": true,
   "name": "learning-typescript",
   "version": "1.0.0",
