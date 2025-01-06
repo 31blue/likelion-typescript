@@ -9,15 +9,14 @@
   type Point = {
     x: number;
     y: number;
-    z: number;
+    z?: number;
   };
 
   const generatePoint = (x: number, y: number): Point => {
     return { x, y };
   };
 
-  const calcPointValues = (point: Point) =>
-    Object.entries(point).reduce((total, [, value]) => total + value, 0);
+  const calcPointValues = (point: Point) => Object.entries(point).reduce((total, [, value]) => total + value, 0);
 
   const anyPoint: Point = { x: 10, y: -20 };
 

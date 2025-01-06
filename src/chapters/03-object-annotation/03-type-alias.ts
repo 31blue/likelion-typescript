@@ -15,8 +15,8 @@
     isMarried: boolean;
     age: number;
   } = {
-    name: '수연',
-    gender: '여성',
+    name: "수연",
+    gender: "여성",
     isMarried: true,
     age: 36,
   };
@@ -27,8 +27,8 @@
     isMarried: boolean;
     age: number;
   } = {
-    name: '재호',
-    gender: '남성',
+    name: "재호",
+    gender: "남성",
     isMarried: false,
     age: 24,
   };
@@ -45,15 +45,15 @@
   };
 
   const suyeon: Friend = {
-    name: '수연',
-    gender: '여성',
+    name: "수연",
+    gender: "여성",
     isMarried: true,
     age: 36,
   };
 
   const jaeho: Friend = {
-    name: '재호',
-    gender: '남성',
+    name: "재호",
+    gender: "남성",
     isMarried: false,
     age: 24,
   };
@@ -68,10 +68,7 @@
     return { x, y };
   };
 
-  const powPoint = (porint: {
-    x: number;
-    y: number;
-  }): { x: number; y: number } => {
+  const powPoint = (porint: { x: number; y: number }): { x: number; y: number } => {
     return {
       x: point.x ** 2,
       y: point.y ** 2,
