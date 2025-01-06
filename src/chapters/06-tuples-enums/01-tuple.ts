@@ -9,9 +9,9 @@
 // 숫자 또는 문자 타입을 항목으로 허용하는 배열은 다음과 같이 타입을 지정할 수 있습니다.
 
 {
-  let stuff: Array<string | number> = ['생수병', '텀블러', '전자렌지', 101];
+  let stuff: Array<string | number> = ["생수병", "텀블러", "전자렌지", 101];
 
-  stuff = [202, 'TV', 'Radio'];
+  // stuff = [202, 'TV', 'Radio'];
 }
 
 // 같은 방법으로 RGBA 타입을 지정해보았습니다.
@@ -19,20 +19,20 @@
 // 오류가 감지되도록 타입을 지정해봅니다.
 
 {
-  type RGBA = (number | string)[];
+  type RGBA = [number, number, number, string];
 
-  let rgba: RGBA = [255, 255, 255, '34.5%'];
+  let rgba: RGBA = [255, 255, 255, "34.5%"];
 
   // 잘못된 값 타입 😟
-  rgba = ['30%', 100, 200, 0];
+  rgba = [100, 100, 200, "Green"];
 }
 
 // HTTP_Response 타입이 정상적으로 작동되도록 타입을 지정합니다.
 
 {
-  type HTTP_Response = [];
+  type HTTP_Response = [number, string];
 
-  const SUCCESS: HTTP_Response = [200, 'OK'];
-  const NOT_FOUND: HTTP_Response = [404, 'NOT FOUND'];
+  const SUCCESS: HTTP_Response = [200, "OK"];
+  const NOT_FOUND: HTTP_Response = [404, "NOT FOUND"];
   const STATUS: HTTP_Response[] = [SUCCESS, NOT_FOUND];
 }
