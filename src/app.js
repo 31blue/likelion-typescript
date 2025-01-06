@@ -1,3 +1,23 @@
 const http = require("node:http");
 
-console.log(typeof http);
+const HOSTNAME = "localhost";
+const PORT = 4000;
+
+const server = http.createServer((request, response) => {
+  response.end(`
+    <!doctype html>
+    <html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Typescript 에센셜</title>
+    </head>
+    <body>
+        <h1>Typescript 에센셜</h1>
+    </body>
+    </html>
+  `);
+});
+
+server.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}/`);
+});
