@@ -18,7 +18,7 @@
 
   body.addEventListener("click", handleClickBody);
 
-  const handleInput = (e) => {
+  const handleInput = (e: Event) => {
     let value = (e.target as HTMLInputElement).value;
     console.log(value);
   };
