@@ -12,7 +12,7 @@
     kind: string;
   };
 
-  type Dog = {
+  type AnotherDog = Dog & {
     age: number;
   };
 }
@@ -22,7 +22,7 @@
     kind: string;
   }
 
-  interface Dog {
+  interface AnotherDog extends Dog {
     age: number;
   }
 }

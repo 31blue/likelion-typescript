@@ -9,9 +9,9 @@
 // unknown 타입이라 알 수 없는 iDontKnow 타입을 단언해봅니다.
 
 {
-  let iDontKnow: unknown = '어떤 타입인지 알 수 없어요.';
+  let iDontKnow: unknown = "어떤 타입인지 알 수 없어요.";
 
-  let numberOfCharacters = iDontKnow.length;
+  let numberOfCharacters = (iDontKnow as string).length;
 
   console.log(numberOfCharacters);
 }
@@ -19,9 +19,9 @@
 // body가 참조하는 타입을 단언해봅니다.
 
 {
-  const body: HTMLBodyElement | null = document.querySelector('body');
+  const body = document.querySelector("body") as HTMLBodyElement;
 
-  body.addEventListener('click', (e) => {
-    console.log('clicked body element');
+  body.addEventListener("click", (e) => {
+    console.log("clicked body element");
   });
 }
